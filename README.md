@@ -42,4 +42,10 @@ Found in the file "Prophet.py"
 
 
 ## E- DASHBOARD: 
-To visualize our dashboard, please run the app.py and then click on the webapp URL on the terminal.
+To visualize our dashboard, please run the **app.py** and then click on the webapp URL on the terminal.
+
+https://github.com/Behachee/The-Endless-Line/assets/140748662/b9d92c8e-3beb-47d7-b54b-8707aa306bd5
+
+
+
+
