@@ -27,7 +27,7 @@ Unearths key dynamics via various graph plots correlation heatmaps between our m
 Our key insights can be found in the ipynb file named EDA, which leverages the work done in the previous section to uncover reliable and meaningful statistics. 
 
 
-## III- Modelling:
+## C- Modelling:
   1)   In the file 'Modeling.ipynb' we try to find a model that estimates well the waiting time. 
        Our final selection is a Random Forest for which the error drops below 10%. 
        Other models were tried below the results for Random Forest, but the results were not convincing and thus the model not selected.
@@ -36,10 +36,10 @@ Our key insights can be found in the ipynb file named EDA, which leverages the w
        We use a log-log OLS model to find the best-fitting regression equations that explain the tendency observed in our target variable, 'WAIT TIME'. 
        This part is key as our dashboard exhibits the effect that changing the level of important features has on our target variable.
        
-## IV- Forecasting:
+## D- Forecasting:
 Use of Prophet for forecasting based on our available historical data. 
 Found in the file "Prophet.py"
 
 
-## V- DASHBOARD: 
+## E- DASHBOARD: 
 To visualize our dashboard, please run the app.py and then click on the webapp URL on the terminal.
