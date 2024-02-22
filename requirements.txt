@@ -1,0 +1,10 @@
+dash
+pandas
+numpy
+plotly
+prophet
+scikit-learn
+matplotlib
+tqdm
+xgboost
+statsmodels
