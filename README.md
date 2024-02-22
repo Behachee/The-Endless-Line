@@ -22,12 +22,12 @@ Regarding categorical variables, we hot-encoded them as dummy variables.
 
 Because the file is so big (800Mo), we could not upload it in our github's data folder. 
 
-### B. Exploratory Data Analysis 
+## B. Exploratory Data Analysis 
 Unearths key dynamics via various graph plots correlation heatmaps between our main selected variables.
 Our key insights can be found in the ipynb file named EDA, which leverages the work done in the previous section to uncover reliable and meaningful statistics. 
 
 
-### C. Modelling:
+## C. Modelling:
   1)   In the file 'Modeling.ipynb' we try to find a model that estimates well the waiting time. 
        Our final selection is a Random Forest for which the error drops below 10%. 
        Other models were tried below the results for Random Forest, but the results were not convincing and thus the model not selected.
@@ -36,7 +36,7 @@ Our key insights can be found in the ipynb file named EDA, which leverages the w
        We use a log-log OLS model to find the best-fitting regression equations that explain the tendency observed in our target variable, 'WAIT TIME'. 
        This part is key as our dashboard exhibits the effect that changing the level of important features has on our target variable.
        
-### D. Forecasting:
+## D. Forecasting:
 Use of Prophet for forecasting based on our available historical data. 
 Found in the file "Prophet.py"
 
