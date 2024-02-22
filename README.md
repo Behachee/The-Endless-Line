@@ -45,7 +45,5 @@ To explore our dashboard and insights:
 
 We welcome contributions and suggestions. Feel free to fork the repository, make changes, and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
