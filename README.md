@@ -1,55 +1,51 @@
 # The-Endless-Line
 
+## Overview
 
+This project, *The-Endless-Line*, focuses on analyzing the waiting times at the Port Aventura park. Through a comprehensive approach that includes data cleaning, merging, feature engineering, exploratory data analysis, modeling, forecasting, and dashboard visualization, we aim to provide insights into factors influencing wait times and offer predictions to improve visitor experiences.
 
-Our analysis focuses on the waiting time experienced at the Port Aventura park. 
+![Dashboard Screenshot](https://github.com/Behachee/The-Endless-Line/assets/140748662/b9d92c8e-3beb-47d7-b54b-8707aa306bd5 "Dashboard Screenshot")
 
+## Project Structure
 
-https://github.com/Behachee/The-Endless-Line/assets/140748662/b9d92c8e-3beb-47d7-b54b-8707aa306bd5
+### A. Data Preparation
 
-The project is structured as follows: 
+#### I. Cleaning & Merging
+Data from various sources including Weather, Client types & transactions, and Attraction attributes were merged to create a unified data repository. Two main files were created differing only in the granularity of data (15 min, and 1 day averages).
 
-## A. Data files cleaning, merging, & feature engineering :
+#### II. Feature Engineering
+Key steps included 'robustization' to reduce noise, dropping days when the park was closed, and addressing non-stationarity with the ADF test. New categorical variables like SEASONALITY and DAY PERIOD were introduced for analysis.
 
-### I- Cleaning & Merging 
-We were provided with several files that gathered information regarding the Weather, Client types & transactions, Attraction attributes,... 
-and we merged them to get a comprehensive data repository of all the key information we needed to have. 
-We created two main files, of which the only difference is the granularity of the data: 15 min, and 1 day. The latter was computed as a daily average of all relevant attributes. 
+### B. Exploratory Data Analysis (EDA)
+Utilizing the cleaned and engineered data, we conducted an EDA to uncover key dynamics and correlations between variables. Insights are documented in the EDA notebook.
 
-### II- Feature Engineering: 
-Most notable was the treatment of noise by making the data more robust for further statistical analysis. The strategy is shown in the function 'robustization',
-where we simply disregard data that falls 4.5 standard deviations away from the mean. This number may seem arbitrary, but we tested several values (2, 2.5, 3, 3.5, 4, 4.5, and 5)
-on our Random Forest model and selected the one with the best result.
-We also droped days for which the park was close, and treated any non-stationarity issues for continuous variables with the ADF test
-Util functions used to correct stationarity also appear in the ipynb file "Feature Engineering P1". 
-Two notable categorical variables were added : SEASONALITY (summer, winter, autumn, and spring) and DAY PERIOD (morning, afternoon, evening) for further usage. 
-Regarding categorical variables, we hot-encoded them as dummy variables. 
+### C. Modelling
+1. **Random Forest Model**: Achieved an error rate below 10%, making it our model of choice for estimating wait times.
+2. **Feature Importance Analysis**: Conducted in 'Log.ipynb' to understand the impact of various features on wait times.
 
-Because the file is so big (800Mo), we could not upload it in our github's data folder. 
+### D. Forecasting
+Implemented using Prophet for future wait time predictions, as detailed in "Prophet.py".
 
-## B. Exploratory Data Analysis 
-Unearths key dynamics via various graph plots correlation heatmaps between our main selected variables.
-Our key insights can be found in the ipynb file named EDA, which leverages the work done in the previous section to uncover reliable and meaningful statistics. 
+### E. Dashboard
+A user-friendly dashboard to visualize insights and predictions. Run **app.py** and follow the terminal instructions to access the web app.
 
+## Getting Started
 
-## C- Modelling:
-  1)   In the file 'Modeling.ipynb' we try to find a model that estimates well the waiting time. 
-       Our final selection is a Random Forest for which the error drops below 10%. 
-       Other models were tried below the results for Random Forest, but the results were not convincing and thus the model not selected.
-  2)   In the file 'Log.ipynb', we study the feature importance for each independent variable (with respect to each & all attractions) to understand which
-       factors explain best the waiting time (target variable) and gain insights on their quantitative impact on the latter.
-       We use a log-log OLS model to find the best-fitting regression equations that explain the tendency observed in our target variable, 'WAIT TIME'. 
-       This part is key as our dashboard exhibits the effect that changing the level of important features has on our target variable.
-       
-## D- Forecasting:
-Use of Prophet for forecasting based on our available historical data. 
-Found in the file "Prophet.py"
+To explore our dashboard and insights:
 
+1. Clone this repository:
+    ```git clone https://github.com/Behachee/The-Endless-Line.git```
+2. Install required dependencies:
+    ```pip install -r requirements.txt```
+3. Run the application:
+    ```python app.py```
+4. Open the provided web app URL in your browser.
 
-## E- DASHBOARD: 
-To visualize our dashboard, please run the **app.py** and then click on the webapp URL on the terminal.
+## Contributions
 
+We welcome contributions and suggestions. Feel free to fork the repository, make changes, and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
+## License
 
-
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
