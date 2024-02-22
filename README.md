@@ -11,7 +11,7 @@ We were provided with several files that gathered information regarding the Weat
 and we merged them to get a comprehensive data repository of all the key information we needed to have. 
 We created two main files, of which the only difference is the granularity of the data: 15 min, and 1 day. The latter was computed as a daily average of all relevant attributes. 
 
-###2) Feature Engineering: 
+### 2) Feature Engineering: 
 Most notable was the treatment of noise by making the data more robust for further statistical analysis. The strategy is shown in the function 'robustization',
 where we simply disregard data that falls 4.5 standard deviations away from the mean. This number may seem arbitrary, but we tested several values (2, 2.5, 3, 3.5, 4, 4.5, and 5)
 on our Random Forest model and selected the one with the best result.
