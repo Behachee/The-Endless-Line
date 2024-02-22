@@ -4,7 +4,7 @@
 
 This project, *The-Endless-Line*, focuses on analyzing the waiting times at the Port Aventura park. Through a comprehensive approach that includes data cleaning, merging, feature engineering, exploratory data analysis, modeling, forecasting, and dashboard visualization, we aim to provide insights into factors influencing wait times and offer predictions to improve visitor experiences.
 
-![Dashboard Screenshot](https://github.com/Behachee/The-Endless-Line/assets/140748662/b9d92c8e-3beb-47d7-b54b-8707aa306bd5 "Dashboard Screenshot")
+[Dashboard Screenshot](https://github.com/Behachee/The-Endless-Line/assets/140748662/b9d92c8e-3beb-47d7-b54b-8707aa306bd5 "Dashboard Screenshot")
 
 ## Project Structure
 
